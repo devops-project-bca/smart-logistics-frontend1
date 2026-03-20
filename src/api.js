@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://smart-logistics-backend.happyhill-9f60ef5d.centralindia.azurecontainerapps.io/api";
+const API_BASE = "https://smart-logistics-backend.happyhill-9f60ef5d.centralindia.azurecontainerapps.io/api";
 export const ShipmentAPI = {
   list: () => axios.get(API_BASE),
   get: (id) => axios.get(`${API_BASE}/${id}`),
