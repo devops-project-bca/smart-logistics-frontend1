@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_BASE = process.env.REACT_APP_API_BASE_URL;
+const API_BASE =
+  process.env.REACT_APP_API_BASE || "http://localhost:8080/api/shipments";
 
 export const ShipmentAPI = {
   list: () => axios.get(API_BASE),

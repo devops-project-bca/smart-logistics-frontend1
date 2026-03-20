@@ -466,7 +466,7 @@ export default function App() {
             </Stack>
 
             <Typography variant="body2" color="text.secondary">
-              Note: Tracking Number is unique (cannot duplicate).
+              Note: Tracking Number is unique (cannot duplicate)              npm install && npm run build              npm install && npm run build              npm install && npm run build              npm install && npm run build              npm install && npm run build.
             </Typography>
           </Stack>
         </DialogContent>
