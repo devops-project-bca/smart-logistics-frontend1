@@ -176,13 +176,14 @@ export default function App() {
     try {
       setSaving(true);
       const payload = {
-        ...form,
         trackingNumber: form.trackingNumber.trim(),
-        senderName: form.senderName.trim(),
-        receiverName: form.receiverName.trim(),
+        senderName: form.senderName.trim() || null,
+        receiverName: form.receiverName.trim() || null,
         pickupCity: form.pickupCity.trim(),
         dropCity: form.dropCity.trim(),
-        vehicleNumber: form.vehicleNumber.trim(),
+        vehicleNumber: form.vehicleNumber.trim() || null,
+        status: form.status || "CREATED",
+        expectedDeliveryDate: form.expectedDeliveryDate || null,
       };
 
       if (editId) {
