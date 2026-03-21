@@ -185,8 +185,6 @@ export default function App() {
         status: form.status,
         expectedDeliveryDate: form.expectedDeliveryDate,
       };
-      
-      console.log("Sending payload:", payload);
 
       if (editId) {
         await ShipmentAPI.update(editId, payload);
@@ -200,7 +198,6 @@ export default function App() {
       await load();
     } catch (e) {
       // Error from backend (e.g., validation, uniqueness, etc.)
-      console.error("API Error:", e.response?.data || e.message);
       const errorMsg = e.response?.data?.message || e.response?.data?.error || e.message || "Save failed. Please check the data and try again.";
       notify(errorMsg, "error");
     } finally {
