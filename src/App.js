@@ -289,7 +289,7 @@ export default function App() {
 
         {/* Search + filters */}
         <Paper variant="outlined" sx={{ p: 2, mb: 2 }}>
-          <Stack direction={{ xs: "column", md: "row" }} spacing={2} alignItems="center">
+             <Stack direction={{ xs: "column", md: "row" }} spacing={2} alignItems="center">
             <TextField
               fullWidth
               label="Search (tracking, city, sender, vehicle, status...)"
