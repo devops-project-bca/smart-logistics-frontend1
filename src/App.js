@@ -291,7 +291,7 @@ export default function App() {
         <Paper variant="outlined" sx={{ p: 2, mb: 2 }}>
           <Stack direction={{ xs: "column", md: "row" }} spacing={2} alignItems="center">
             <TextField
-              fullWidth
+                fullWidth
               label="Search (tracking, city, sender, vehicle, status...)"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
