@@ -10,5 +10,51 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <style>
+      body.dark-mode {
+        background: #181a1b !important;
+        color: #e8e6e3 !important;
+        transition: background 0.3s, color 0.3s;
+      }
+      #darkModeToggleBtn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9999;
+        background: #222;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        cursor: pointer;
+        outline: none;
+        transition: background 0.2s;
+      }
+      #darkModeToggleBtn:hover {
+        background: #444;
+      }
+    </style>
+    <script>
+      (function() {
+        // Apply theme on load
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.body.classList.add('dark-mode');
+        }
+        // Create toggle button
+        var btn = document.createElement('button');
+        btn.id = 'darkModeToggleBtn';
+        btn.title = 'Toggle dark mode';
+        btn.innerHTML = '🌙';
+        btn.onclick = function() {
+          var isDark = document.body.classList.toggle('dark-mode');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        };
+        document.body.appendChild(btn);
+      })();
+    </script>
   </body>
 </html>
