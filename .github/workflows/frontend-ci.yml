@@ -33,6 +33,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=devops-project-bca_smart-logistics-frontend
-            -Dsonar.organization=devops-project-bca
-            -Dsonar.sources=src
+            -Dsonar.projectKey=devops-project-bca_smart-logistics-frontend \
+            -Dsonar.organization=devops-project-bca \
+            -Dsonar.sources=src \
+            -Dsonar.branch.name=main
